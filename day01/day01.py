@@ -1,10 +1,8 @@
-filePath = "C:\\Users\\nikol\\Desktop\\aoc24\\day01\\data.txt"
-
-def part1(fp):
+def part1(filePath):
     l1 = []
     l2 = []
 
-    with open(fp, "r") as file:
+    with open(filePath, "r") as file:
         for line in file.readlines():
             pair = (line.strip()).split()
             l1.append(int(pair[0]))
@@ -14,11 +12,11 @@ def part1(fp):
 
     return distance
 
-def part2(fp):
+def part2(filePath):
     l1 = []
     l2 = []
 
-    with open(fp, "r") as file:
+    with open(filePath, "r") as file:
         for line in file.readlines():
             pair = (line.strip()).split()
             l1.append(int(pair[0]))
@@ -27,5 +25,5 @@ def part2(fp):
     similarityScore = (sum([(l1.count(x) * x) for x in l2]))
     return similarityScore
 
-print(f"part 1 answer: {part1(filePath)}")
-print(f"part 2 answer: {part2(filePath)}")
+print(f"part 1 answer: {part1("C:\\Users\\nikol\\Desktop\\aoc24\\day01\\data.txt")}")
+print(f"part 2 answer: {part2("C:\\Users\\nikol\\Desktop\\aoc24\\day01\\data.txt")}")
